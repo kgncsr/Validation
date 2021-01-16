@@ -1,0 +1,58 @@
+﻿@model Register
+
+<div class="bg-primary text-white m-1 p-1">
+    <h2>Create User</h2>
+</div>
+<br />
+
+<form class="p-1 m-1" asp-action="Register" asp-controller="Home" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <div><span class="text-danger" asp-validation-for="Name"></span></div>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <div><span class="text-danger" asp-validation-for="UserName"></span></div>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <div><span class="text-danger" asp-validation-for="Email"></span></div>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <div><span class="text-danger" asp-validation-for="Password"></span></div>
+        <input asp-for="Password" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="RePassword"></label>
+        <div><span class="text-danger" asp-validation-for="RePassword"></span></div>
+        <input asp-for="RePassword" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="BirthDate"></label>
+        <div><span class="text-danger" asp-validation-for="UserName"></span></div>
+        <input type="text" asp-for="BirthDate" asp-format="{0:d}" class="form-control" />
+    </div>
+
+    <div><span class="text-danger" asp-validation-for="Accepted"></span></div>
+    <div class="radio form-group">
+        <input asp-for="Accepted" />
+        <label asp-for="Accepted" class="form-check-label">
+            I accept
+        </label>
+    </div>
+
+    <input type="submit" class="btn btn-danger" value="Ok" />
+
+
+
+</form>
